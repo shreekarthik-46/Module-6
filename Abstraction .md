@@ -1,12 +1,12 @@
-# 🐍 Python OOP: Abstract Class & Method Example
+#  Python OOP: Abstract Class & Method Example
 
-## 🎯 AIM
+##  AIM
 
 To create an **abstract class** named `Shape` with an **abstract method** `calculate_area`, and implement this method in two subclasses: `Rectangle` and `Circle`.
 
 ---
 
-## 🧠 ALGORITHM
+## ALGORITHM
 
 1. **Import ABC module**:
    - Use `from abc import ABC, abstractmethod` to define abstract classes and methods.
@@ -28,8 +28,33 @@ To create an **abstract class** named `Shape` with an **abstract method** `calcu
 
 ---
 
-## 💻 Program
+##  Program
+```
+from abc import ABC,abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def calculate_area(self):
+        pass
+class Rectangle(Shape):
+    length = 5
+    breadth =3 
+    def calculate_area(self):
+        return self.length * self.breadth
 
+class Circle(Shape):
+  radius = 4
+  def calculate_area(self):
+      return 3.14 * self.radius * self.radius
+rec=Rectangle()#object created for the class 'Rectangle'
+cir=Circle() #object created for the class 'Circle'
+print("Area of a rectangle:", rec.calculate_area()) #call to 'calculate_area' method defined inside the class 'Rectangle'
+print("Area of a circle:", cir.calculate_area()) #call to 'calculate_area' method defined inside the class 'Circle'.
+```
 ## Output
 
+![circel rect](https://github.com/user-attachments/assets/7bef979a-8ec3-4cdc-91cd-3e9dd41d1222)
+
+
 ## Result
+
+Thus an **abstract class** named `Shape` with an **abstract method** `calculate_area`, and implement this method in two subclasses: `Rectangle` and `Circle` is created
